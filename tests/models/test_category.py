@@ -1,4 +1,6 @@
-from backend.models.base_model import BaseModel
+import sys
+sys.path.append('.')
+from models.base_model import BaseModel
 from models.category import Category
 
 name = 'Category'

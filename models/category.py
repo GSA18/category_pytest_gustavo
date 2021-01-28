@@ -1,3 +1,5 @@
+import sys
+sys.path.append('.')
 from sqlalchemy import Column, String
 from models.base_model import BaseModel
 from sqlalchemy.orm import validates
