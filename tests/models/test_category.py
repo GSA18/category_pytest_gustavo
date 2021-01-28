@@ -34,9 +34,21 @@ def test_validate_name():
     except Exception as e:
         assert isinstance(e, ValueError)
 
+def test_validate_name2():
+    try:
+        Category(' ', 'Eletronicos')
+    except Exception as e:
+        assert isinstance(e, ValueError)        
+
 
 def test_validate_description():
     try:
         Category('Moveis', '     ')
     except Exception as e:
         assert isinstance(e, ValueError)
+
+def test_validate_description2():
+    try:
+        Category('Moveis', None)
+    except Exception as e:
+        assert isinstance(e, ValueError)        
