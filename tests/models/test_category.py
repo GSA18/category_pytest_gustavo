@@ -28,15 +28,30 @@ def test_has_attribute():
     assert hasattr(category, 'name')
     assert hasattr(category, 'description')
 
-def test_validate_name():
+
+def test_validate_name_none():
     try:
         Category(None, 'Eletronicos')
     except Exception as e:
         assert isinstance(e, ValueError)
 
 
-def test_validate_description():
+def test_validate_name_empty():
     try:
-        Category('Moveis', '     ')
+        Category(' ', 'Eletronicos')
+    except Exception as e:
+        assert isinstance(e, ValueError)
+
+
+def test_validate_description_none():
+    try:
+        Category('Moveis', None)
+    except Exception as e:
+        assert isinstance(e, ValueError)
+
+
+def test_validate_description_empty():
+    try:
+        Category('Moveis', ' ')
     except Exception as e:
         assert isinstance(e, ValueError)
