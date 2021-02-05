@@ -1,0 +1,154 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-color: #282828;
+}
+
+a.link-menu {
+    margin: 0;
+    width: 10%;
+    padding: 5px;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    transition: 0.5s;
+    color: #ffffff;
+}
+
+a.link-menu:hover {
+    color: #ffffff;
+    background-color: #393939;
+}
+
+a.link-menu p {
+    height: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.button {
+    width: 20%;
+    border-radius: 5%;
+    border: 1px solid #0C29D0;
+    background-color: #ffffff;
+    transition: 0.5s;
+    margin: 0 auto;
+}
+
+.button:hover {
+    background-color: #0C29D0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.link-button {
+    color: #0C29D0;
+    transition: 1s;
+}
+
+a.link-button:hover {
+    color: #ffffff;
+}
+
+a.link-button p {
+    text-align: center;
+    margin: 0px;
+    padding: 15px 0;
+}
+
+.input-form {
+    padding: 5px 0;
+    font-size: 0.9em;
+    border: none;
+    border-bottom: 1.5px solid rgb(186, 186, 186);
+    color: rgb(62, 62, 62);
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+table th {
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+td {
+    font-weight: 200;
+}
+
+td, th {
+    border: 1px solid #F5F5FB;
+    text-align:center;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: #F5F5FB;
+}
+
+.popup {
+    width: 10%;
+    margin: 0;
+}
+
+.popuptext {
+    visibility: hidden;
+    width: 20%;
+    background-color: rgb(58, 181, 84);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    margin: auto;
+}
+  
+.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.7s;
+    animation: fadeIn 0.7s;
+    transition: 10s;
+}
+  
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; } 
+    to { opacity: 1; }
+}
+  
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.form-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.title-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

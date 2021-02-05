@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+{% block body %}
+<div class='button'>
+    <a href='/create_category' class="link-button">
+        <p>Criar novo</p>
+    </a>
+</div>
+<div>
+    <br />
+    <table>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Ação</th>
+        </tr>
+        {% for  category in list %}
+                <tr>
+                    <td>{{ category.id_ }}</td>
+                    <td>{{ category.name }}</td>
+                    <td>{{ category.description }}</td>
+                    <td>
+                        <a href='/categories/{{ category.id_ }}' class="link-button">
+                            <p>Editar</p>
+                        </a>
+                        <a href='/categories/{{ category.id_ }}/delete' class="link-button">
+                            <p>Deletar</p>
+                        </a>
+                    </td>
+                </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
