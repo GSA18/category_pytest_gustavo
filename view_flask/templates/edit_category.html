@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block body %}
+<div class="form-container">
+    <form action="/categories/{{ object.id_ }}" method="POST">
+        <input type="text" placeholder="Nome" value="{{ object.name }}" name="name" class="input-form" required/>
+        <input type="text" placeholder="Descrição" value="{{ object.description}}" name="description" class="input-form" required/>
+        <br /><br />
+        <input type="submit" class="button" />
+
+    </form>
+</div>
+{% endblock %}

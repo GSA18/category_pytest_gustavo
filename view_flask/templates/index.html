@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='global.css') }}" rel="stylesheet">
+    <title>Atividade - Olist</title>
+</head>
+<body>
+    <nav>
+        <a href='/categories' class="link-menu">
+            <p>Categories</p>
+        </a>
+  
+    </nav>
+    
+    <div class="title-container">
+        <h2>{{ title }}</h2>
+    </div>
+    
+    {% block body %}{% endblock %}
+    <span class="popuptext" visible='{{save}}' class="show" id="save">Salvo com sucesso!</span>  
+</body>
+
+<script>
+    isvisible = document.getElementById("save").getAttribute("visible")
+    if (isvisible === 'true') {
+        setTimeout(saveWarning, 200);
+        setTimeout(saveWarning, 1000);
+    }
+
+    function saveWarning() {
+        var popup = document.getElementById("save");
+        popup.classList.toggle("show");
+    }
+</script>
+</html>
